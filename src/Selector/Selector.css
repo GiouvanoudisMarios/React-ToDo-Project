@@ -1,0 +1,37 @@
+select {
+  padding: 10px;
+  border: 1px solid var(--purple-color); /* Same color as the dark button */
+  border-radius: 5px;
+  background-color: var(--purple-color); /* Same color as the dark button */
+  cursor: var(--custom-cursor); /* Custom cursor for the select element */
+  font-size: 1.2em; /* Responsive font size */
+  white-space: nowrap; /* Prevent text wrapping */
+  overflow: hidden; /* Hide overflow text */
+  text-overflow: ellipsis; /* Add ellipsis for overflow text */
+}
+
+select option {
+  background-color: #f7f7f7; /* White background for options */
+  color: var(--purple-color); /* Purple text color for options */
+  cursor: var(--custom-cursor); /* Custom cursor for the options */
+}
+
+/* Styling for light mode */
+.light-mode select {
+  color: white;
+}
+
+.light-mode select option {
+  background-color: #f7f7f7;
+  color: var(--purple-color);
+}
+
+/* Styling for dark mode */
+.dark-mode select {
+  color: white;
+}
+
+.dark-mode select option {
+  background-color: #f7f7f7;
+  color: var(--purple-color);
+}

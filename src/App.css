@@ -1,0 +1,170 @@
+:root {
+  --custom-cursor-light: url('../assets/pointer.png'), auto;
+  --custom-cursor-dark: url('../assets/Pointer-dark.png'), auto;
+  --dark-mode-bg: #252525;
+  --purple-color: #6C63FF;
+  --light-mode-bg: #F7F7F7;
+  --apply-btn-bg-color-light: #6C63FF; /* Define light mode button color */
+  --apply-btn-bg-color-dark: #6C63FF; /* Define dark mode button color */
+  --button-border-color-light: #6C63FF; /* Define light mode button border color */
+  --button-border-color-dark: #6C63FF; /* Define dark mode button border color */
+}
+
+.light-mode {
+  --custom-cursor: var(--custom-cursor-light);
+  --modal-bg-color: #F7F7F7;
+  --apply-btn-bg-color: var(--apply-btn-bg-color-light);
+  --button-border-color: var(--button-border-color-light);
+}
+
+.dark-mode {
+  --custom-cursor: var(--custom-cursor-dark);
+  --modal-bg-color: #252525;
+  --apply-btn-bg-color: var(--apply-btn-bg-color-dark);
+  --button-border-color: var(--button-border-color-dark);
+}
+
+/* Ensure the entire page has the background color */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body.light-mode {
+  background-color: var(--light-mode-bg);
+  color: #000000;
+}
+
+body.dark-mode {
+  background-color: var(--dark-mode-bg);
+  color: #ffffff;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%; /* Keeps the UI centered and with margins */
+  max-width: 800px; /* Optional max-width for larger screens */
+  margin: 0 auto; /* Centers the app horizontally */
+}
+
+.head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 20vh;
+  margin-top: 5%;
+}
+
+.head_title {
+  font-family: 'Kanit',  sans-serif;
+  font-size: 26px;
+  font-weight: 500;
+  text-align: left;
+  margin-bottom: 0; /* Optional spacing */
+}
+
+.head_controls {
+  margin-top: auto;
+  width: 100%;
+  height: 30%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.head_input {
+  width: 80%;
+  height: 100%;
+}
+
+.head__selector {
+  width: 18%;
+  height: 100%;
+  margin-left: 2%;
+  color: white;
+  background-color: var(--purple-color);
+  cursor: var(--custom-cursor); /* Use custom cursor */
+  border-radius: 5px;
+}
+
+.head_button {
+  width: 6%;
+  height: 100%;
+  margin-left: 2%;
+  color: white;
+  background-color: var(--purple-color);
+  border: none;
+  cursor: var(--custom-cursor); /* Use custom cursor */
+  border-radius: 5px;
+  /* for the image */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.head_button img {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.head_button:active {
+  background-color: #4f498e; /* Darkened color on click */
+}
+
+.main {
+  width: 90%; /* Ensure the main container takes up the full width */
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main_list {
+  width: 90%;
+}
+
+.main_div_button {
+  position: absolute;
+  bottom: 20%; /* Distance from the bottom of the page */
+  right: 26%; /* Distance from the right side of the page */
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main_div_add_button {
+  width: 90%;
+  height: 90%;
+  background-color: var(--purple-color);
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main_div_button:hover {
+  cursor: var(--custom-cursor); /* Use custom cursor */
+}
+
+.main_div_add_button img {
+  width: 60%;
+  height: 60%;
+}
+
+.light-mode {
+  background-color: var(--light-mode-bg);
+  color: #000000;
+}
+
+.dark-mode {
+  background-color: var(--dark-mode-bg);
+  color: #ffffff;
+}

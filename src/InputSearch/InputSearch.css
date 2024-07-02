@@ -1,0 +1,35 @@
+.input-search {
+  font-family: 'Kanit',  sans-serif;
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--purple-color);
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding-right: 30px; /* Add padding to make space for the icon */
+  background-size: 20px 20px; /* Adjust the size of the icon as needed */
+  background-position: calc(100% - 2%) center;
+}
+
+.light-mode .input-search {
+  background-color: var(--light-mode-bg);
+  color: #000000;
+  background: url('../assets/Mglass.png') no-repeat calc(100% - 2%) center;
+  border-color: var(--purple-color);
+}
+
+.light-mode .input-search::placeholder {
+  color: #C3C1E5;
+  padding-left: 2%;
+}
+
+.dark-mode .input-search {
+  background-color: #333333;
+  color: #ffffff;
+  background: url('../assets/MglassDarkMode.png') no-repeat calc(100% - 2%) center;
+  border-color: #ffffff; /* Change border color to white in dark mode */
+}
+
+.dark-mode .input-search::placeholder {
+  color: #666666;
+  padding-left: 2%;
+}

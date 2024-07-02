@@ -1,0 +1,77 @@
+ul {
+  width: 100%; /* Adjust this value as needed to make the list wider */
+  margin: 3% auto; /* Center the list within the parent container */
+  padding:0;
+  list-style: none; /* Remove default list styling */
+}
+
+
+.main_item {
+  font-family: 'Kanit',  sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2% 10%; /* Adjust padding as needed */
+  border-bottom: 1px solid var(--purple-color);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+
+.main_checkbox {
+  margin-right: 2%;
+}
+
+.main_description {
+  flex-grow: 1;
+  margin-right: 2%; /* Add margin to create space for the delete button */
+  font-size: 1.2em;
+}
+
+.main_description.completed {
+  text-decoration: line-through;
+  color: #999; /* Adjust the color as needed */
+}
+
+.main_delete-button {
+  background: url('../../assets/Delete.png') no-repeat center center;
+  background-size: contain;
+  width: 15%; /* Adjust size as needed */
+  height: 25px; /* Adjust size as needed */
+  border: none;
+  cursor: pointer;
+  margin-left: auto; /* Push the button to the far right */
+}
+
+.main_delete-button:hover {
+  background: url('../../assets/Delete-hover.png') no-repeat center center;
+  background-size: contain;
+  cursor: var(--custom-cursor); /* Use custom cursor on hover */
+}
+
+.empty-state {
+  text-align: center;
+  margin-top: 10%;
+}
+
+.empty-state img {
+  width: 60%;
+  height: 60%;
+}
+.empty-state p {
+  font-family: "Kanit", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.light-mode .main_item {
+  background-color: #f9f9f9;
+  color: #000000;
+}
+
+.dark-mode .main_item {
+  background-color: #252525;
+  color: #ffffff;
+}

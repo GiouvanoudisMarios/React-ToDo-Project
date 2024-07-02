@@ -1,0 +1,71 @@
+/* Default styles for larger screens */
+@media screen and (min-width: 1024px) {
+  .app {
+    width: 50%;
+  }
+
+  .head_title {
+    font-size: 2em; 
+  }
+
+  .main_item {
+    padding: 2% 5%;
+  }
+
+  .main_div_button {
+    bottom: 15%; 
+    right: 25%;
+  }
+
+  .apply-cancel button {
+    width: 20%;
+  }
+}
+
+/* Styles for tablets */
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  .app {
+    width: 70%;
+  }
+
+  .head_title {
+    font-size: 1.8em;
+  }
+
+  .main_item {
+    width: 80%;
+    padding: 2% 5%;
+  }
+
+  .apply-cancel button {
+    width: 30%;
+  }
+}
+
+/* Styles for mobile devices */
+@media screen and (max-width: 767px) {
+  .app {
+    width: 100%;
+  }
+
+  .head_title {
+    font-size: 1.5em;
+  }
+
+  .main_item {
+    width: 80%;
+    padding: 5% 2%;
+  }
+
+  .apply-cancel button {
+    width: 40%;
+    font-size: 14px; /* Adjust font size for buttons */
+    padding: 2%;
+  }
+
+ 
+  .main_div_button {
+    bottom: 15%; /* Adjust position for smaller screens */
+    right: 5%;
+  }
+}

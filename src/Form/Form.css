@@ -1,0 +1,100 @@
+.modal_form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1%;
+  background-color: var(--modal-bg-color);
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.modal_form h1 {
+  font-family: 'Kanit',  sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0; /* Remove bottom margin to keep the header close to the top */
+}
+
+.modal_form form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Align items to the start */
+  width: 100%;
+  height: 100%;
+}
+
+.modal_inputDiv {
+  width: 100%;
+  margin-top: 20px; /* Add margin to create space between header and input */
+  flex-grow: 1; /* Allow this to grow and push buttons down */
+}
+
+.modal_inputDiv input {
+  font-family: 'Kanit',  sans-serif;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.light-mode .modal_inputDiv input {
+  background-color: var(--light-mode-bg);
+  color: #000000;
+  border: 1px solid var(--purple-color); /* Moved border property here */
+}
+
+.light-mode .modal_inputDiv input::placeholder {
+  color: #C3C1E5;
+  padding-left: 2%;
+}
+
+.dark-mode .modal_inputDiv input {
+  background-color: #333333;
+  color: #ffffff;
+  border: 1px solid #ffffff; /* Moved border property here */
+}
+
+.dark-mode .modal_inputDiv input::placeholder {
+  color: #666666;
+  padding-left: 2%;
+}
+
+.apply-cancel {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: auto; /* Push buttons to the bottom */
+  padding-bottom: 0;
+}
+
+.apply-cancel button {
+  width: 25%;
+  padding: 1%;
+  font-size: 16px;
+  border: 1px solid var(--button-border-color);
+  border-radius: 5px;
+  cursor: var(--custom-cursor); /* Use custom cursor */
+}
+
+.apply {
+  background-color: var(--apply-btn-bg-color);
+  color: white;
+  border: none; /* Remove border for apply button */
+}
+
+.cancel {
+  background-color: var(--cancel-btn-bg-color);
+  color: var(--purple-color);
+}
+
+/* Add styles for the disabled button */
+.apply.disabled {
+  background-color: #ccc; /* Lighter background color */
+  color: #999; /* Lighter text color */
+  cursor: not-allowed; /* Disabled cursor */
+}

@@ -1,0 +1,24 @@
+{
+  "toDos": [
+    {
+      "id": "2024-07-02T13:17:23.487Z",
+      "description": "Note #1",
+      "completed": false
+    },
+    {
+      "id": "2024-07-02T13:17:25.844Z",
+      "description": "Note #2",
+      "completed": false
+    },
+    {
+      "id": "2024-07-02T13:17:27.641Z",
+      "description": "Note #3",
+      "completed": true
+    },
+    {
+      "id": "2024-07-02T13:17:30.010Z",
+      "description": "Note #4",
+      "completed": false
+    }
+  ]
+}
