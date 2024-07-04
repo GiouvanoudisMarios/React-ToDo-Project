@@ -84,27 +84,3 @@ export const updateTaskCompleted = async (id, completed, setToDoList) => {
     throw new Error(`Error at updateTaskCompleted ${error}`);
   }
 };
-
-// this will be used in PUT updateTask to update the description on EDIT button
-export const updateTaskDescription = async (
-  id,
-  updateDescription,
-  setToDoList
-) => {
-  try {
-    // I have to fetch the whole object based on ID so that it won't ruin my other properties when I change description
-    const response = await fetch(`http://localhost:8000/toDos/${id}`);
-    if (!response.ok) {
-      throw new Error(`Error: ${response.statusText}`);
-    }
-    const data = await response.json();
-    const objectWithNewDescription = {
-      ...data,
-      description: updateDescription,
-    };
-
-    await updateTask(id, objectWithNewDescription, setToDoList);
-  } catch (error) {
-    throw new Error(`Error at updateTaskDescription ${error}`);
-  }
-};
