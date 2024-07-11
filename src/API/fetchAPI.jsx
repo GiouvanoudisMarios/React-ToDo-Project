@@ -10,21 +10,25 @@ export const fetchResponse = async () => {
 };
 // onSubmit to add a new object
 export const addTask = async (inputValue, setInputValue, setToDoList) => {
-  let newId = new Date();
+  try {
+    let newId = new Date();
 
-  const response = await fetch("http://localhost:8000/toDos", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      id: newId,
-      description: inputValue,
-      completed: false,
-    }),
-  });
+    const response = await fetch("http://localhost:8000/toDos", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        id: newId,
+        description: inputValue,
+        completed: false,
+      }),
+    });
 
-  setInputValue("");
-  const updatedList = await fetchResponse();
-  setToDoList(updatedList);
+    setInputValue("");
+    const updatedList = await fetchResponse();
+    setToDoList(updatedList);
+  } catch (error) {
+    console.error("Failed to add the task:", error);
+  }
 };
 
 // onClick to delete
