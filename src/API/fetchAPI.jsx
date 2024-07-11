@@ -22,6 +22,9 @@ export const addTask = async (inputValue, setInputValue, setToDoList) => {
         completed: false,
       }),
     });
+    if (!response.ok) {
+      throw new Error(`Error: ${response.statusText}`);
+    }
 
     setInputValue("");
     const updatedList = await fetchResponse();
